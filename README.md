@@ -44,28 +44,27 @@ Pour mener à bien ce projet, j'utiliserais différentes technologies de prototy
 
 ```mermaid
 gantt
-    title Machine à Pince (Option Maker 2026)
+    title Planning Hebdomadaire : Machine à Pince (2026)
     dateFormat  YYYY-MM-DD
-    axisFormat  %d/%m
-    
+    axisFormat  Sem %U
+
     section Phase 1 : Prototypage
-    Initialisation & Git      :milestone, m1, 2026-01-15, 0d
-    CAD : Pince & Joystick    :a1, 2026-01-19, 7d
-    Impression 3D : Pince     :a2, 2026-01-26, 3d
-    Laser : Châssis & Axes    :a3, 2026-01-26, 3d
-    PCB : Joystick & Bouton   :a4, 2026-01-29, 11d
-    LiPo : Pack & BMS         :a6, 2026-02-12, 4d
-    Finitions                 :a7, 2026-02-19, 7d
-    
+    S1 : Initialisation & Git           :active, s1, 2026-01-15, 4d
+    S2 : CAD Pince & Documentation      :s2, 2026-01-19, 7d
+    S3 : Impression 3D & Découpe Laser  :s3, 2026-01-26, 7d
+    S4 : Conception PCB (Joystick)      :s4, 2026-02-02, 7d
+    S5 : Soudure PCB & Pack LiPo        :s5, 2026-02-09, 7d
+
     section Phase 2 : Construction & Code
-    Montage Mécanique X-Y-Z   :b1, 2026-02-16, 3d
-    Câblage & Optimisation    :b2, 2026-02-19, 18d
-    Code : Mouvements         :b3, 2026-03-09, 3d
-    Calibration & Debug       :b4, 2026-03-12, 4d
-    Intégration Pince         :b5, 2026-03-16, 3d
-    Tests de Saisie           :b6, 2026-03-19, 4d
-    Finalisation Autonomie    :b7, 2026-03-23, 7d
-    Documentation & Vidéo     :b8, 2026-03-30, 3d
-    Réglages Soutenance       :b9, 2026-04-02, 11d
-    Soutenance Finale         :milestone, m2, 2026-04-13, 0d
+    S6 : Montage Mécanique & Câblage    :b1, 2026-02-16, 7d
+    S7 : Projet libre & Début Code      :b2, 2026-02-23, 7d
+    S8 : Vacances / Dev. Code           :crit, b3, 2026-03-02, 7d
+
+    section Phase 3 : Finalisation
+    S9 : Pilotage Axes & Joystick       :b4, 2026-03-09, 7d
+    S10 : Intégration Pince & Debug     :b5, 2026-03-16, 7d
+    S11 : Tests & Montage Vidéo Insta   :b6, 2026-03-23, 7d
+    S12 : Finalisation Doc & Vidéo      :b7, 2026-03-30, 7d
+    S13 : Préparation Soutenance        :b8, 2026-04-06, 7d
+    Soutenance Finale (13 Avril)        :milestone, m1, 2026-04-13, 0d
 ``` 
