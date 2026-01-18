@@ -8,8 +8,8 @@ L'idée est de concevoir un système automatisé capable de déplacer une pince 
 
 ## **Sommaire**
 1. [Principe de réalisation](#1-principe-de-réalisation)
-2. [Organisation du dépôt](#-2-organisation-du-dépôt)
-3. [Rétro-planning](#-3-rétro-planning)
+2. [Organisation du dépôt](#2-organisation-du-dépôt)
+3. [Rétro-planning](#3-rétro-planning)
 
 ## **1. Principe de réalisation**
 Pour mener à bien ce projet, j'utiliserais différentes technologies de prototypage rapide qu'on va étudier en cours :
@@ -50,10 +50,10 @@ gantt
     
     section Phase 1 : Prototypage
     Initialisation & Git      :milestone, m1, 2026-01-15, 0d
-    CAD : Pince & Joystick    :a1, 2026-01-19, 3d
-    Impression 3D : Pince     :a2, 2026-01-26, 4d
+    CAD : Pince & Joystick    :a1, 2026-01-19, 7d
+    Impression 3D : Pince     :a2, 2026-01-26, 3d
     Laser : Châssis & Axes    :a3, 2026-01-26, 3d
-    PCB : Joystick & Bouton   :a4, 2026-01-29, 4d
+    PCB : Joystick & Bouton   :a4, 2026-01-29, 11d
     LiPo : Pack & BMS         :a6, 2026-02-12, 4d
     Finitions                 :a7, 2026-02-19, 7d
     
@@ -64,7 +64,7 @@ gantt
     Calibration & Debug       :b4, 2026-03-12, 4d
     Intégration Pince         :b5, 2026-03-16, 3d
     Tests de Saisie           :b6, 2026-03-19, 4d
-    Finalisation Autonomie    :b7, 2026-03-23, 3d
+    Finalisation Autonomie    :b7, 2026-03-23, 7d
     Documentation & Vidéo     :b8, 2026-03-30, 3d
     Réglages Soutenance       :b9, 2026-04-02, 11d
     Soutenance Finale         :milestone, m2, 2026-04-13, 0d
