@@ -48,23 +48,21 @@ gantt
     dateFormat  YYYY-MM-DD
     axisFormat  Sem %U
 
-    section Phase 1 : Prototypage
-    S1 : Initialisation & Git           :active, s1, 2026-01-15, 4d
-    S2 : CAD Pince & Documentation      :s2, 2026-01-19, 7d
-    S3 : Impression 3D & Découpe Laser  :s3, 2026-01-26, 7d
-    S4 : Conception PCB (Joystick)      :s4, 2026-02-02, 7d
-    S5 : Soudure PCB & Pack LiPo        :s5, 2026-02-09, 7d
+    Initialisation & Git           :active, s1, 2026-01-15, 4d
+    CAD Pince & Documentation      :s2, 2026-01-19, 7d
+    Impression 3D & Découpe Laser  :s3, 2026-01-26, 7d
+    Conception PCB (Joystick)      :s4, 2026-02-02, 7d
+    Soudure PCB & Pack LiPo        :s5, 2026-02-09, 7d
 
-    section Phase 2 : Construction & Code
-    S6 : Montage Mécanique & Câblage    :b1, 2026-02-16, 7d
-    S7 : Projet libre & Début Code      :b2, 2026-02-23, 7d
-    S8 : Vacances / Dev. Code           :crit, b3, 2026-03-02, 7d
+    Montage Mécanique & Câblage    :b1, 2026-02-16, 7d
+    Projet libre & Début Code      :b2, 2026-02-23, 7d
+    Dev. Code           :crit, b3, 2026-03-02, 7d
 
     section Phase 3 : Finalisation
-    S9 : Pilotage Axes & Joystick       :b4, 2026-03-09, 7d
-    S10 : Intégration Pince & Debug     :b5, 2026-03-16, 7d
-    S11 : Tests & Montage Vidéo Insta   :b6, 2026-03-23, 7d
-    S12 : Finalisation Doc & Vidéo      :b7, 2026-03-30, 7d
-    S13 : Préparation Soutenance        :b8, 2026-04-06, 7d
+    Pilotage Axes & Joystick       :b4, 2026-03-09, 7d
+    Intégration Pince & Debug     :b5, 2026-03-16, 7d
+    Tests & Montage Vidéo Insta   :b6, 2026-03-23, 7d
+    Finalisation Doc & Vidéo      :b7, 2026-03-30, 7d
+    Préparation Soutenance        :b8, 2026-04-06, 7d
     Soutenance Finale (13 Avril)        :milestone, m1, 2026-04-13, 0d
 ``` 
