@@ -31,30 +31,31 @@ Pour mener à bien ce projet, j'utiliserais différentes technologies de prototy
 
 
 
-## **Organisation du dépôt**
+## **2. Organisation du dépôt**
 
-* **[Project_Management](./Project_Management/)** : Contient le suivi de projet, le journal de bord hebdomadaire, le rétro-planning détaillé.
+* **[Project_Management](./Project_Management/)** : Contient le suivi de projet, le journal de bord hebdomadaire, la to do list.
 * **[CAD](./CAD)** : Plans de découpe LASER et modèles 3D (pince, supports, rails).
 * **[Hardware](./Hardware)** : Schémas électriques, fichiers de routage du PCB et liste des composants (BOM).
 * **[Software](./Software)** : Code source pour le pilotage des moteurs et la gestion des entrées utilisateur.
-* **[Media](./Media)** : Photos de l'avancement, captures d'écran CAO et vidéo finale.
+* **[Media](./Media)** : Photos de l'avancement, captures d'écran CAO.
+
+## **3. Rétro-planning**
 
 
 ```mermaid
 gantt
-    title Rétro-planning : Machine à Pince (Option Maker 2026)
+    title Machine à Pince (Option Maker 2026)
     dateFormat  YYYY-MM-DD
     axisFormat  %d/%m
     
     section Phase 1 : Prototypage
     Initialisation & Git      :milestone, m1, 2026-01-15, 0d
     CAD : Pince & Joystick    :a1, 2026-01-19, 3d
-    Impression 3D : Pince     :a2, 2026-01-22, 4d
+    Impression 3D : Pince     :a2, 2026-01-26, 4d
     Laser : Châssis & Axes    :a3, 2026-01-26, 3d
     PCB : Joystick & Bouton   :a4, 2026-01-29, 4d
-    Soudure : Assemblage      :a5, 2026-02-02, 3d
-    LiPo : Pack & BMS         :a6, 2026-02-05, 4d
-    Couture & Finitions       :a7, 2026-02-09, 7d
+    LiPo : Pack & BMS         :a6, 2026-02-12, 4d
+    Finitions                 :a7, 2026-02-19, 7d
     
     section Phase 2 : Construction & Code
     Montage Mécanique X-Y-Z   :b1, 2026-02-16, 3d
