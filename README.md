@@ -41,7 +41,7 @@ Pour mener à bien ce projet, j'utiliserais différentes technologies de prototy
 
 ## **3. La Vidéo**
 
-**[Vidéo](./Video)** :
+**[Vidéo](./Video)** : https://drive.google.com/file/d/1W1O2IbCMhVlpO9_WxJg_nLt_xPJUzEdX/view?usp=drive_link
 Une V2 upgradée avec effets spéciaux arrivera dans la soirée :))
  
 ##
