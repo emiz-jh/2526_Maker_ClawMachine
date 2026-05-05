@@ -22,13 +22,12 @@ Pour mener à bien ce projet, j'utiliserais différentes technologies de prototy
 
 ### **1.2 Électronique & Énergie**
 * **PCB :** Conception d'un circuit imprimé pour centraliser le contrôle des moteurs, du joystick et du bouton.
-* **Alimentation (LiPo) :** Fabrication d'un pack batterie LiPo avec BMS intégré pour assurer la sécurité et l'autonomie du système.
+* **Alimentation (LiPo) :** Fabrication d'une alimentation avec un transformateur secteur vers 12V.
 
 ### **1.3 Gestion de projet & Livrables**
 * **Versionning (Git) :** Utilisation de Git et GitHub pour le suivi du code source et des fichiers de conception.
-* **Documentation :** Reporting continu sur ce README.md et sur la plateforme maker.ensea.fr.
+* **Documentation :** Reporting sur ce README.md.
 * **Rendu final :** Code source complet, fichiers de fabrication et vidéo de démonstration de 90 secondes.
-
 
 
 ## **2. Organisation du dépôt**
@@ -37,12 +36,16 @@ Pour mener à bien ce projet, j'utiliserais différentes technologies de prototy
 * **[CAD](./CAD)** : Plans de découpe LASER et modèles 3D (pince, supports, rails).
 * **[Hardware](./Hardware)** : Schémas électriques, fichiers de routage du PCB et liste des composants (BOM).
 * **[Software](./Software)** : Code source pour le pilotage des moteurs et la gestion des entrées utilisateur.
-* **[Media](./Media)** : Photos de l'avancement, captures d'écran CAO.
+* **[Livrables](./Livrables)** : Exercices de la première partie de l'option Maker. 
 
 ## **3. La Vidéo**
 
-**[Vidéo](./Video)** : https://drive.google.com/file/d/1W1O2IbCMhVlpO9_WxJg_nLt_xPJUzEdX/view?usp=drive_link
-Une V2 upgradée avec effets spéciaux arrivera dans la soirée :))
+**[Vidéo](./Video)** : 
+
+https://drive.google.com/file/d/1W1O2IbCMhVlpO9_WxJg_nLt_xPJUzEdX/view?usp=drive_link
+
+La V2 améliorée avec effets et sous-titres:))
+https://drive.google.com/file/d/1D8p6vP7SQkmDleE7tSXRGyAG6I4MARXa/view?usp=drive_link
  
 ##
 **Auteure :** Emilie ZHENG
