@@ -41,8 +41,9 @@ Pour mener à bien ce projet, j'utiliserais différentes technologies de prototy
 
 ## **3. La Vidéo**
 
-ELLE ARRIVE !!!
-
+**[Vidéo](./Video)** :
+Une V2 upgradée avec effets spéciaux arrivera dans la soirée :))
+ 
 ##
 **Auteure :** Emilie ZHENG
 
