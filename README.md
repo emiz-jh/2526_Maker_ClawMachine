@@ -39,36 +39,9 @@ Pour mener à bien ce projet, j'utiliserais différentes technologies de prototy
 * **[Software](./Software)** : Code source pour le pilotage des moteurs et la gestion des entrées utilisateur.
 * **[Media](./Media)** : Photos de l'avancement, captures d'écran CAO.
 
-## **3. Rétro-planning**
+## **3. La Vidéo**
 
-
-```mermaid
-gantt
-    title Planning Hebdomadaire : Machine à Pince (2026)
-    dateFormat  YYYY-MM-DD
-    axisFormat  %d-%m
-    tickInterval 1w
-
-    section Phase 1 : Prototypage
-    Initialisation & Git           :active, s1, 2026-01-15, 4d
-    CAD Pince & Documentation      :s2, 2026-01-19, 7d
-    Impression 3D & Découpe Laser  :s3, 2026-01-26, 7d
-    Conception PCB                 :s4, 2026-02-02, 7d
-    Soudure PCB & Pack LiPo        :s5, 2026-02-09, 7d
-
-    section Phase 2 : Construction & Code
-    Montage Mécanique & Câblage    :b1, 2026-02-16, 7d
-    Projet libre & Début Code      :b2, 2026-02-23, 7d
-    Dev. Code                      :crit, b3, 2026-03-02, 7d
-
-    section Phase 3 : Finalisation
-    Pilotage Axes & Joystick       :b4, 2026-03-09, 7d
-    Intégration Pince & Debug      :b5, 2026-03-16, 7d
-    Tests & Montage Vidéo Insta    :b6, 2026-03-23, 7d
-    Finalisation Doc & Vidéo       :b7, 2026-03-30, 7d
-    Préparation Soutenance         :b8, 2026-04-06, 7d
-    Soutenance Finale (13 Avril)   :milestone, m1, 2026-04-13, 0d
-``` 
+ELLE ARRIVE !!!
 
 ##
 **Auteure :** Emilie ZHENG

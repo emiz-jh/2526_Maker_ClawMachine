@@ -180,3 +180,234 @@
 * Custom template
 * Do not include > Do not include
 * ISO > A2 > mm > Comma > ISO > No Views
+
+
+# **Jeu 29/01**
+
+* Remplir tous les champs NPN sur Kicad
+* Installer le plugin Interactive Html Bom
+
+# Lundi 02/02/26
+
+## I2C
+* I2C pour lire il fait arr^ter décrire
+* un me=aire et plusieurs esclave
+* transistor impose état bas, état haut est par défaut
+* 1 résistane de pull-up par ligne et pas par périphérique, résistance variable
+* transistor ouvert = condo
+
+## SPI
+* I2C et SPi sont synchrone car partagent une horloge
+* SPI full-duplex = une ligen dans un sens ou dans l'autre
+
+## USB
+* créé pou remplacer l'HUART
+* plusieurs norme : high-speed (standard)
+* plug & play : ça marche en branchant et on peut débrancher sans pb
+* USB = bidirectionel
+
+* USB C a plus de PIN que USB normal (car on peut brancher dans les 2 sens)
+* "+ "et des"-" sont des pertes différéntielles
+* résistance de 5,1 kohm entre ... et la masse et ... la masse
+* ajouter le composant avec 5 diodes pour protéger circuit, limite les tensions entre 0 et 5,1 V
+* diode de protection en cas de surcharcge
+* à soude rau plus près du connecteur
+* pistes proche l'une de l'autre, quasi rien en dessous
+* les vaguelettes diapo 11 c'est tuneless pour rallonger les pistes les plus courtes pour qu'elles soient égales aux autres pistes, car très rapides
+* fils longs = successions de condo et bobines
+* ondulations due au circuit élec => rajouter une résistance en série en amont pour limiter ondulations
+* encoder = 2 interrupteurs pour détecter appuis
+* condo permet de gérer charge et décharge via la résistance
+  
+## Diode TVS
+* supprime tous les gros pics de décharges (cg Maxie et PPZ qui se prennent des jus pour l'atelier soudure xD)
+* dès qu'il y a surplus, le courant passe dans la diode pour éviter de se prendre une chataigne
+* filtre LC pour filtrer bruit et mettre condo au plus proche des condo
+* en mettre sur chaque connecteur où ill y a du signal
+
+## Datasheet
+* applications notes fournis un doc pour nous montrer comment marche un composant compliqué (cf amp audio), sinon pour les petits composnats, tout est dans la datasheet
+* schéma = comprendre le circuit
+* routage = réalise le circuit, n'est pas le schéma
+* VDD = drain, Vss = source
+  
+## Symbol editor
+* quand on a pas le bon composant existant dans Kicad
+* ne pas chercher des symboles sur Internet car en général on se retrouve avec une copie de l'emprunte (pin dans l'ordre dans ce cas )=> l'ordre des pins n'est souvent pas dans l'ordre en pratique en général !
+
+### Bonnes pratiques ordres des pins
+* créer une nouvelle librairie
+* toutes les alims en haut et toutes les masses en bas
+* attention, il n'y a souvent pas qu'une suele masse (elles sont cachées le sunes derrières les autres)
+* entrées à gauche et sorties à droites
+
+### Electrical type pins 
+* input = reçoit un signal qui vient d'une autre
+* output = peut être câblé sur plusieurs entrée, pas cablage sur un autre output, génère un signal utilisable par un autre composant
+* power_input = pin qui reçoit une alimentation
+* Tri-state : on peut imposer 1 ou 0, en haute impédance (connecteur ouvert)
+* masse vue comme une alimentation a 0V = power_input
+
+### création librarie 
+* cf slide 29
+* toujours vérifier si les composants n'existennt pas déjà
+* il faut faire des calculs pour que ça corresponde à la réalité
+*  définir si c'est composant monté en surface ou traversant
+  
+### numérotation des PINS
+* vérifier top view ou bottom view !!!!!
+* composants avec plusieurs sens possibles = rotation dans le sens direct
+* pin numéro 1 est donné par rond ou triangle (puis on compte dans les sens direct)
+* attention dimention en **millimètre** ou en **millième de pouce** par ex
+
+### Layers dans le footprint editor de KiCad*
+* diapo 33
+* Mask c'est là où il n'y a pas de verni (pour mettre pâte à braser par ex, laisser les pads des composants traversants) 
+* Courtyard = composants trop proches entre eux, KiCad nous insulte
+  
+## Page hiérarchique
+* pour PCB complexe
+* processeur = 1 page
+* batterie BMS = 1 page
+* carte SD = 1 page
+* partie analogique = 1 page
+* labels globaux = label accessibke par toutes les pages
+* label locaux = n'est définie que dans la page
+* label hiérarchique = def comme entrée et sorties d'une fonction (losanges, triangle coupé)
+* sur la page principale, pour faire apparaitre label hierarchique : clic-droit place sheet pin
+* on peut dupliquer par ex 3 composants associée à 3 pages hiérarchiques identiques
+
+## Datasheet et MPN
+* définir le MPN, surtout pour les composants spéciifiques (hors résistances ou condos classiques): clic-droit > symbol properties 
+* SKU = c'est le numéro du QR code du manufactureur
+
+## Electric Rules Checker
+* 0%
+
+## Composants
+* déterminer taille PCB et trous de fixations
+* un truc avec bcp de pins = placer au centre
+* Connecteurs coudés : faire en sorte que les cables partent vers l’extérieur de la carte et pas au-dessus, il y a un sens
+* câblé vers nous = Pin 1 est à gauche
+* led avec les leds, condo de decouplage ensemble, ...
+
+## 4 couches
+* 1 plan de masse et 1 plan d'alim
+* puissance à droite, logique à gaucge, puissance intermédiaire (driver) au center
+* 1 via = 1 ampère qu'on peut passer
+* via dans le pad est possible pour les petits composants
+* couche internes sont plus fines que couches externes => on peut passer moins de courant : mettre les plans très large pour pas que ça chauffe
+
+## Stackup - Configuration
+* isolant du milieu souvent + épais car c'ets lui qui fait rigidité du PCB
+* Board Setup (2eme onglet de la barre de menu du haut)
+* PCB en alu bien pour la dissipation thermique, mais comme c'est conducteur, pas de couche bottom possible, droit à qu'une seule couche
+* Cooper layer = 4
+* ne pas changer In1, In2, ... => renommer la fin avec des "-"
+  
+## Contraintes
+* données par le fabriquant
+* 1 oz = 35 microns
+* trou de 0.3mm/0.4/pad de 0.45mmm
+* blind via = entre 2 couches internes => cher, ne pas faire
+* réduire de 10% solder mask pour pate à braser
+
+
+hub usb 4 ports en sortie : CH334F
+pogo pin = pin sur ressort
+
+
+
+# Lundi 09/02/26
+
+## 1. Reconnaitre les tissus 
+
+### 1.1 Les fibres textiles
+
+* fibre naturelle
+    - végétale
+    - animale
+    - végétale
+* fibres synthétique 
+    - polyesther (issu du pétrole)
+    - viscose (chimique/artificielle)
+    - polyamide (issu du pétrole) : nylon
+
+### 1.2 Les tissus
+
+- tissu tricoté (ex Jersey dans les sweats) : s'effiloche quand on le découpe, ne se détache pas/reste tissé
+- tissu non-tricoté (feutre de laine, laine de roche) : fibre tassée/compressée, bord net quand on le découpe
+- tissu tissé : enchevêtrement de fils ; fil de trame (vertical, soit on le met "au-dessus"(soulève), soit "en dessous"), fil de chaîne (horizontal ; avec un métier à tisser)
+    - les armures : 
+        - la toile (2x2)
+        - le sergé (3x3) : ex le jean
+        - le satin (5x5)
+    - bien reconnaître l'endroit et l'envers
+    - lisière (fil utilisé verticalement sur le tissu, comme le fil de trame) important : permet de reconnaître le droit fil qui est parallèle à la lisière
+    - droit fil : jambes de pantalon
+    - biais : + d'élasticité : utlisé pour le nivau de la ceinture du pantalon
+
+
+## 2. Techniques de coutures à la main
+
+
+* coudre de droite vers la gauche pour les droitiers
+## 3. Machine à coudre
+
+* on peut coudre maximum 6mm d'épaisseur sur les machines classiques
+## 4. Application lors d'un projet
+
+on aura eu le support de tel et la phochette qui va avec
+iron maiden
+
+# Lundi 16/02/26
+
+## Commandes
+- 100 euros de budget par personne
+- Passer les commandes très rapidement
+
+# Jeudi 19/02/26
+
+- faire ses propres batteries = moins cher et plus libre sur la forme de la batterie
+
+- **2 types de batteries (piles)**
+    - primaire (jetables)
+    - secondaires (rechargeables)
+
+- **batteries primaires**
+    - utilisable 1 fois
+    - Lithium : système d'alarme
+- **batteries secondaires**
+    - Niquel Cadmium =  Cadmium vraiment toxique pour l'environnement (lumière des sorties de secours)
+    - Niquel Metal Hybride = bonne durée de vie et eco-friendly
+    - Lead acid = grosse capacité (300 Ah), mais inflammable avec le liquide acide ; libère de l'hydrogène qui est explosif avec l'oxygène
+    - Lithium Ion = batterie qui nous apporte le plus de puissance par rapport à la masse (ex : drônes)
+    - LiFePO4 : capacité moindre massique (plus lourde que le Lithium Ion)
+
+## Batteries LiPo
+
+- Lithium Ion 3,7V en tension nominale par bâton
+- Lithium Ion 3,2V en tension nominale par bâton
+- Forme cylindrique du bâton avec un tour inox constitue une protection (pas facilement perçable par rapport au Lithium polymère)
+    - INR = mélange entre IMR et ICR
+
+## Slide 11/22
+- Ne pas charger à plus de 1C = 6000mA (6A)
+- En général quand c'est pas précisé dans les indications, on peut charger à 1C
+- 4S = 4 cellules en série (3,7*4 = 14,8V)
+- 2P = 2 cellules en parallèle
+- 4000 mAh * 14,8V = 59,20Wh (énergie stockée)
+
+- Chaque cellule doit avoir la même te,dio, fr vharge
+- BMS = Battery Management systèle
+
+
+
+## Conception Batterie 2S
+
+- **Tension nominale** : 7,4 V (2 x 3,7 V)
+- **Tension de fin de charge** : 8,4 V (2 x 4,2 V)
+- **Capacité** : 3450mAh
+- **Courant de décharge continu max** : 8A
+- **BMS** : Modèle 2S 8,4A
+

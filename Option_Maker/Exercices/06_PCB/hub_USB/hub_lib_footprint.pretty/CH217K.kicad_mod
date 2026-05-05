@@ -1,0 +1,88 @@
+(footprint "CH217K"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at -3 -10 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "cce51b1e-d379-495b-9295-fbb74aadb87f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "CH217K"
+		(at -3 -8.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "2456cfee-dc73-4e2d-8ed9-18f4f1a58295")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3ef8e022-51a6-494a-85bf-886df33af3ff")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "86525ab6-f286-483a-b843-a4bbb95e2b6c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_rect
+		(start 0 0)
+		(end 2.9 -1.6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "2ed62b27-2f44-40f3-aaac-1423fb05fd83")
+	)
+	(fp_text user "${REFERENCE}"
+		(at -2.5 -7 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "9bcc74f3-0a20-40e4-bff5-d444149948a8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at 0.25 0 90)
+		(size 0.5 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.15)
+		(uuid "a8cfcbf4-5c7e-4b27-83c9-b950a68f48fd")
+	)
+	(embedded_fonts no)
+)
