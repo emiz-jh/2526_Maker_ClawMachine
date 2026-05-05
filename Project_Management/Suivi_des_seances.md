@@ -1,6 +1,3 @@
-# Journal de bord
-
-# 16/02/26
 
 ## Cahier des charges 
 
